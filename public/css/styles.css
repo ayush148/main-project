@@ -1,0 +1,38 @@
+body {
+  background-color: #A0D8F1;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+div.maindiv{
+  width: 1500px;
+
+}
+
+h1.heading{
+  text-align: center;
+}
+
+.button{
+  font-size: 20px;
+  border-radius: 12px;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.form-control {
+  font-size: 25px; /* Adjust the font size as needed */
+}
+
+.input-group{
+  height: 200px;
+}
+
+.list-group-item{
+  font-size: 20px;
+}

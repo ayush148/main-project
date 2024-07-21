@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  app:
+    image: node:current-alpine
+    container_name: my_node_app
+    working_dir: /usr/src/app
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - "3000:3000"
+    command: ["npm", "start"]
+    depends_on:
+      - mysql
+
+  mysql:
+    image: mysql:5.7
+    container_name: my_mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: toor
+      MYSQL_DATABASE: data
+      MYSQL_USER: ayush
+      MYSQL_PASSWORD: ayush
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+volumes:
+  mysql_data:
