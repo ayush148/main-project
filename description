@@ -1,0 +1,7 @@
+step
+
+docker network create net
+
+docker run -d --name sql --network net -e MYSQL_ROOT_PASSWORD=toor -e MYSQL_DATABASE=data -e MYSQL_USER=ayush -e MYSQL_PASSWORD=ayush mysql:5.7
+
+docker run --name code2 --network net -p 3000:3000 rtxayush/project-sql:code
